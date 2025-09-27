@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Armour|Zapinova-Perú</title>
+    <link rel="stylesheet" href="adidas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="inicioimg/logo.png" alt="Zapinova Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="contactenos.html">Contactos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <header>
+        <h1>Under Armour</h1>
+        <div class="buscador">
+            <input type="text" id="buscador" placeholder="Buscar producto...">
+            <button id="btnBuscar">Buscar</button>
+        </div>
+        <div>
+            <nav>
+                <ul>
+
+                    <li><a href="under.html">Varones</a></li>
+                    <li><a href="undermujer.html">Mujeres</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script>
+        // Capturamos los elementos
+        const input = document.getElementById("buscador");
+        const button = document.getElementById("btnBuscar");
+        const productos = document.querySelectorAll(".producto");
+
+        // Función de búsqueda
+        function buscarProducto() {
+            const filtro = input.value.toLowerCase().trim();
+
+            productos.forEach(prod => {
+                const nombre = prod.querySelector(".nombre").textContent.toLowerCase();
+
+                if (nombre.includes(filtro)) {
+                    prod.style.display = "block"; // Mostrar si coincide
+                } else {
+                    prod.style.display = "none"; // Ocultar si no coincide
+                }
+            });
+        }
+
+        // Evento al hacer click en el botón
+        button.addEventListener("click", buscarProducto);
+
+        // También buscar al presionar "Enter"
+        input.addEventListener("keyup", function (e) {
+            if (e.key === "Enter") {
+                buscarProducto();
+            }
+        });
+    </script>
+    <main>
+        <section class="productos">
+
+            <div class="producto">
+                <img src="Under Armour/under m1.webp" alt="">
+                <p>ZAPATILLAS MUJER UNDER ARMOUR RUNNING GRIS 3026179-108 CUERO</p>
+                <p class="precio">S/ 289.99</p>
+                <a href="tallas.html" class="btn-comprar">Comprar</a>
+            </div>
+
+            <div class="producto">
+                <img src="Under Armour/under m2.webp" alt="">
+                <p>ZAPATILLAS MUJER UNDER ARMOUR RUNNING MORADO STREET MIRAGE</p>
+                <p class="precio">S/ 249.99 </p>
+                <a href="tallas.html" class="btn-comprar">Comprar</a>
+            </div>
+
+            <div class="producto">
+                <img src="Under Armour/under m3.webp" alt="">
+                <p>ZAPATILLAS MUJER UNDER ARMOUR DEPORTIVAS GRIS 3028406-289 CHARGED V</p>
+                <p class="precio">S/ 249.99 </p>
+                <a href="tallas.html" class="btn-comprar">Comprar</a>
+            </div>
+
+            <div class="producto">
+                <img src="Under Armour/under m4.jpeg" alt="">
+                <p>ZAPATILLAS UNDER ARMOUR PARA MUJER SURGE 3 - PLOMO 3024894-104</p>
+                <p class="precio">S/ 319.90 </p>
+                <a href="tallas.html" class="btn-comprar">Comprar</a>
+            </div>
+
+
+            <div class="producto">
+                <img src="Under Armour/under m5.jpeg" alt="">
+                <p>ZAPATILLAS UNDER ARMOUR PARA MUJER RUNNING VICTORY - ROSA 3023640-602</p>
+                <p class="precio">S/ 209.90 </p>
+                <a href="tallas.html" class="btn-comprar">Comprar</a>
+            </div>
+
+            <div class="producto">
+                <img src="Under Armour/under m6.webp" alt="">
+                <p>ZAPATILLAS UNDER ARMOUR PARA MUJER MOJO 2 - CELESTE 3024131-300</p>
+                <p class="precio">S/ 275.00</p>
+                <a href="tallas.html" class="btn-comprar">Comprar</a>
+            </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="inicioimg/logo.png" alt="Zapinova Logo">
+            </div>
+
+            <div class="footer-links">
+                <h4>SOBRE NOSOTROS</h4>
+                <ul>
+                    <li><a href="quienes somos.html">Quiénes somos</a></li>
+                    <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+                    <li><a href="contactenos.html">Contáctanos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>ATENCIÓN AL CLIENTE</h4>
+                <ul>
+                    <li><a href="terminos.html">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>SÍGUENOS</h4>
+                <div class="sociales">
+                    <a href="https://facebook.com/tu_pagina" target="_blank" class="facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/tu_usuario" target="_blank" class="instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/tu_usuario" target="_blank" class="twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://youtube.com/@tu_canal" target="_blank" class="youtube"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://wa.me/51928131996" target="_blank" class="whatsapp"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p><strong>Zapinova</strong>. Tienda Online. Derechos reservados: Rudy Hernan De La Cruz Rojas.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zapinova - Tienda Online</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="logo">
+      <img src="inicioimg/logo.png" alt="Zapinova Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="contactenos.html">Contactos</a></li>
+        <li><a href="ofertas.html">Ofertas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= SLIDESHOW ================= -->
+  <section class="slideshow">
+    <img id="imagen" src="" alt="Imagen destacada">
+  </section>
+
+  <script>
+    const imagenes = [
+      "inicioimg/1.png",
+      "inicioimg/2.png"
+    ];
+
+    let indice = 0;
+    const img = document.getElementById("imagen");
+
+    function mostrarSiguienteFoto() {
+      img.style.opacity = 0;
+
+      setTimeout(() => {
+        img.src = imagenes[indice];
+        img.style.opacity = 1;
+        indice = (indice + 3) % imagenes.length;
+      }, 500);
+    }
+
+    mostrarSiguienteFoto();
+    setInterval(mostrarSiguienteFoto, 3000);
+  </script>
+
+  <!-- ================= PRODUCTOS ================= -->
+  <section class="productos">
+    <h2>Productos destacados</h2>
+    <div class="productos-grid">
+      <div class="producto-card">
+        <img src="inicioimg/I-run.jpg" alt="Zapatillas I Run">
+        <h3>I run</h3>
+        <p>Zapatillas Running</p>
+        <p class="price">S/ 200.00</p>
+        <a href="tallas.html" class="btn-comprar">Comprar</a>
+      </div>
+
+      <div class="producto-card">
+        <img src="inicioimg/nike.webp" alt="Nike Promina">
+        <h3>Nike</h3>
+        <p>Promina</p>
+        <p class="price">S/ 299.00</p>
+        <a href="tallas.html" class="btn-comprar">Comprar</a>
+      </div>
+
+      <div class="producto-card">
+        <img src="inicioimg/puma.avif" alt="Puma Inverse">
+        <h3>Puma</h3>
+        <p>Inverse</p>
+        <p class="price">S/ 450.00</p>
+        <a href="tallas.html" class="btn-comprar">Comprar</a>
+      </div>
+
+      <div class="producto-card">
+        <img src="inicioimg/rebook.webp" alt="Reebok Basketball">
+        <h3>Reebok</h3>
+        <p>Basketball</p>
+        <p class="price">S/ 560.00</p>
+        <a href="tallas.html" class="btn-comprar">Comprar</a>
+      </div>
+
+      <div class="producto-card">
+        <img src="inicioimg/under.png" alt="Under Armour Halo Racer">
+        <h3>Under Armour</h3>
+        <p>Halo Racer</p>
+        <p class="price">S/ 630.00</p>
+        <a href="tallas.html" class="btn-comprar">Comprar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MARCAS ================= -->
+  <main>
+    <h2>Las mejores marcas</h2>
+    <div class="marcas">
+      <div class="marca">
+        <a href="adidas.html"><img src="logo adidas/adidas.png" alt="Adidas"></a>
+        <p><a href="adidas.html">Adidas</a></p>
+      </div>
+
+      <div class="marca">
+        <a href="convence.html"><img src="logo converse/converse.png" alt="Converse"></a>
+        <p><a href="convence.html">Converse</a></p>
+      </div>
+
+      <div class="marca">
+        <a href="i run.html"><img src="logo iron/i run.png" alt="I Run"></a>
+        <p><a href="i run.html">I Run</a></p>
+      </div>
+
+      <div class="marca">
+        <a href="newbalance.html"><img src="logo new/new balance.png" alt="New Balance"></a>
+        <p><a href="newbalance.html">New Balance</a></p>
+      </div>
+
+      <div class="marca">
+        <a href="puma.html"><img src="logo puma/puma.png" alt="Puma"></a>
+        <p><a href="puma.html">Puma</a></p>
+      </div>
+
+      <div class="marca">
+        <a href="reebook.html"><img src="logo rebook/rebook.png" alt="Reebok"></a>
+        <p><a href="reebook.html">Reebok</a></p>
+      </div>
+
+      <div class="marca">
+        <a href="skechers.html"><img src="logo skechers/skechers.jfif" alt="Skechers"></a>
+        <p><a href="skechers.html">Skechers</a></p>
+      </div>
+
+      <div class="marca">
+        <a href="under.html"><img src="logo under/under armour.png" alt="Under Armour"></a>
+        <p><a href="under.html">Under Armour</a></p>
+      </div>
+
+      <div class="marca">
+        <a href="vans.html"><img src="logo vans/vans.png" alt="Vans"></a>
+        <p><a href="vans.html">Vans</a></p>
+      </div>
+
+      <div class="marca">
+        <a href="asics.html"><img src="logoAsics/asics.png" alt="Asics"></a>
+        <p><a href="asics.html">Asics</a></p>
+      </div>
+
+      <div class="marca">
+        <a href="nike.html"><img src="logonike/nike.png" alt="Nike"></a>
+        <p><a href="nike.html">Nike</a></p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="inicioimg/logo.png" alt="Zapinova Logo">
+      </div>
+
+      <div class="footer-links">
+        <h4>SOBRE NOSOTROS</h4>
+        <ul>
+          <li><a href="quienes somos.html">Quiénes somos</a></li>
+          <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+          <li><a href="contactenos.html">Contáctanos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>ATENCIÓN AL CLIENTE</h4>
+        <ul>
+          <li><a href="terminos.html">Términos y Condiciones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>SÍGUENOS</h4>
+        <div class="sociales">
+          <a href="https://facebook.com/tu_pagina" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/tu_usuario" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/tu_usuario" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://youtube.com/@tu_canal" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/51928131996" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p><strong>Zapinova</strong>. Tienda Online. Derechos reservados: Rudy Hernan De La Cruz Rojas.</p>
+    </div>
+  </footer>
+</body>
+</html>

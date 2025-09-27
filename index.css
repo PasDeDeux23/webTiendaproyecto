@@ -1,0 +1,280 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background: #f8f9fc;
+  color: #333;
+}
+
+/* ==================== HEADER ==================== */
+header {
+  background: #111;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #ff3c00;
+  border-bottom: 2px solid #ff3c00;
+  padding-bottom: 3px;
+}
+
+
+/* ===== SLIDESHOW ===== */
+.slideshow {
+  max-width: 1200px;   /* límite de ancho centrado */
+  height: 600px;       /* altura más proporcionada */
+  margin: 10px auto;   /* centra con espacio arriba y abajo */
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px; /* bordes elegantes */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* sombreado suave */
+}
+
+.slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* recorta sin deformar */
+  display: block;
+}
+
+
+
+
+
+/* ===== PRODUCTOS DESTACADOS ===== */
+.productos {
+  max-width: 1200px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.productos h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #0a0a23;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.producto-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.producto-card:hover {
+  transform: translateY(-8px);
+}
+
+.producto-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.producto-card h3 {
+  font-size: 20px;
+  color: #111;
+}
+
+.producto-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.price {
+  font-weight: bold;
+  color: #e63946;
+  margin: 10px 0;
+}
+
+.btn-comprar {
+  display: inline-block;
+  background: #e63946;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-comprar:hover {
+  background: #b91c1c;
+}
+
+/* ===== MARCAS ===== */
+main {
+  max-width: 1200px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+main h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #0a0a23;
+}
+
+.marcas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.marca {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.marca:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.marca img {
+  width: 100px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.marca p a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.marca p a:hover {
+  color: #e63946;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #111;
+  color: #fff;
+  padding: 40px 20px 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo img {
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  margin-bottom: 20px;
+}
+
+.footer-links h4 {
+  margin-bottom: 15px;
+  color: #e63946;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #bbb;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+}
+
+.footer-social h4 {
+  margin-bottom: 15px;
+  color: #e63946;
+}
+
+.sociales a {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 18px;
+  color: #bbb;
+  transition: color 0.3s;
+}
+
+.sociales a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+}

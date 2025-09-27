@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="tallas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+   <header>
+    <div class="logo">
+      <img src="inicioimg/logo.png" alt="Zapinova Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="contactenos.html">Contactos</a></li>
+        <li><a href="ofertas.html">Ofertas</a></li>
+      </ul>
+    </nav>
+   </header>
+    <main>
+       <h2>Tallas Peruanas</h2>
+  <div class="sizes" id="sizes">
+    <div class="size">38</div>
+    <div class="size">39</div>
+    <div class="size active">40</div>
+    <div class="size">41</div>
+    <div class="size">42</div>
+    <div class="size">43</div>
+  </div>
+    <div class="quantity">
+    <button id="minus">-</button>
+    <span id="qty">1</span>
+    <button id="plus">+</button>
+  </div>
+  <script>
+  let qty = 1; 
+  const qtyElement = document.getElementById("qty");
+
+  // Botón restar
+  document.getElementById("minus").addEventListener("click", () => {
+    if (qty > 1) { // evita que baje de 1
+      qty--;
+      qtyElement.textContent = qty;
+    } 
+  });
+
+  // Botón sumar
+  document.getElementById("plus").addEventListener("click", () => {
+    if (qty <8) { // límite máximo
+      qty++;
+      qtyElement.textContent = qty;
+    } else {
+      alert("Límite ");
+    }
+  });
+  // Selección de tallas
+    const sizes = document.querySelectorAll(".size");
+    sizes.forEach(size => {
+      size.addEventListener("click", () => {
+        sizes.forEach(s => s.classList.remove("active")); // Quita el rojo de todas
+        size.classList.add("active"); // Activa la talla clickeada
+      });
+    });
+</script>
+
+<a href="pago.html" class="btn-pagar">Pagar</a>
+
+
+
+   <h2>Detalles del producto</h2>
+   
+    <p>Las tallas que se muestran son tallas Peruanas</p>
+    <p>Descubre la comodidad y el estilo en cada paso con nuestras nuevas zapatillas. ¡hazlas tuyas con un solo clic!</p>
+  
+
+    
+</main>
+   <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="inicioimg/logo.png" alt="Zapinova Logo">
+      </div>
+
+      <div class="footer-links">
+        <h4>SOBRE NOSOTROS</h4>
+        <ul>
+          <li><a href="quienes somos.html">Quiénes somos</a></li>
+          <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+          <li><a href="contactenos.html">Contáctanos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>ATENCIÓN AL CLIENTE</h4>
+        <ul>
+          <li><a href="terminos.html">Términos y Condiciones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>SÍGUENOS</h4>
+        <div class="sociales">
+          <a href="https://facebook.com/tu_pagina" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/tu_usuario" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/tu_usuario" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://youtube.com/@tu_canal" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/51928131996" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p><strong>Zapinova</strong>. Tienda Online. Derechos reservados: Rudy Hernan De La Cruz Rojas.</p>
+    </div>
+  </footer>
+</body>
+</html>

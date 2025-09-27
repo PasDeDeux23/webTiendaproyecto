@@ -1,0 +1,186 @@
+/* ------------------ Reset ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f7f7f7;
+  color: #333;
+}
+
+/* ------------------ HEADER ------------------ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 15px 50px;
+}
+
+header .logo img {
+  height: 60px;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #ff3c00;
+  border-bottom: 2px solid #ff3c00;
+}
+
+/* ------------------ FORM ------------------ */
+form {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  font-weight: 600;
+  margin-top: 15px;
+  display: block;
+  color: #222;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+form input:focus {
+  border-color: #ff3c00;
+  box-shadow: 0 0 6px rgba(255, 60, 0, 0.3);
+}
+
+/* Método de pago */
+.methods {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.method {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.method.active {
+  border-color: #ff3c00;
+  background: #ffe8e1;
+  color: #ff3c00;
+}
+
+/* Botón pagar */
+.pay-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #ff3c00;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pay-btn:hover {
+  background: #cc2f00;
+}
+
+/* ------------------ FOOTER ------------------ */
+footer {
+  background: #111;
+  color: #fff;
+  margin-top: 50px;
+  padding: 40px 60px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-logo img {
+  height: 70px;
+}
+
+.footer-links h4,
+.footer-social h4 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #ff3c00;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #ddd;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #ff3c00;
+}
+
+.footer-social .sociales {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social .sociales a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.footer-social .sociales a:hover {
+  color: #ff3c00;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
